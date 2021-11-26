@@ -1,5 +1,5 @@
 package com.example.attendancesystemqr;
-
+//GENERATING QR CODE
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 

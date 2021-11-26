@@ -1,5 +1,5 @@
 package com.example.attendancesystemqr;
-
+//SCANNING QR CODE
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;

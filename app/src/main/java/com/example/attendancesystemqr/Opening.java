@@ -1,5 +1,5 @@
 package com.example.attendancesystemqr;
-
+//SPLASH SCREEN
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
