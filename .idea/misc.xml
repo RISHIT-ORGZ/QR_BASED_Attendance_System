@@ -3,6 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/ANDROID STUDIO/QR-HCI/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.30104166666666665" />
+        <entry key="..\:/ANDROID STUDIO/QR-HCI/app/src/main/res/drawable/ic_launcher_background.xml" value="0.30104166666666665" />
+        <entry key="..\:/ANDROID STUDIO/QR-HCI/app/src/main/res/layout/activity_attendance.xml" value="0.24456521739130435" />
+        <entry key="..\:/ANDROID STUDIO/QR-HCI/app/src/main/res/layout/activity_generating.xml" value="0.28489583333333335" />
+        <entry key="..\:/ANDROID STUDIO/QR-HCI/app/src/main/res/layout/activity_info.xml" value="0.28489583333333335" />
+        <entry key="..\:/ANDROID STUDIO/QR-HCI/app/src/main/res/layout/activity_main.xml" value="0.165" />
+        <entry key="..\:/ANDROID STUDIO/QR-HCI/app/src/main/res/layout/activity_opening.xml" value="0.28489583333333335" />
         <entry key="..\:/Users/Sudhanshu Prasad/Desktop/QR-HCI/app/src/main/res/layout/activity_attendance.xml" value="0.25" />
         <entry key="..\:/Users/Sudhanshu Prasad/Desktop/QR-HCI/app/src/main/res/layout/activity_generating.xml" value="0.25" />
         <entry key="..\:/Users/Sudhanshu Prasad/Desktop/QR-HCI/app/src/main/res/layout/activity_info.xml" value="0.375" />
