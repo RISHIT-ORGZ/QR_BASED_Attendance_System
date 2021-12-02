@@ -52,11 +52,11 @@ public class Attendance extends AppCompatActivity {
                     @Override
                     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                         date1 = (String) parent.getItemAtPosition(position);
+                        ArrayList<String> listItems = new ArrayList<String>();
                         databaseReference.child(date1).addChildEventListener(new ChildEventListener() {
                             @Override
                             public void onChildAdded(@NonNull DataSnapshot dataSnapshot1, @Nullable String s) {
 
-                                ArrayList<String> listItems = new ArrayList<String>();
                                 listView = findViewById(R.id.listView);
                                 for(DataSnapshot ds : dataSnapshot1.getChildren()) {
                                     String name = ds.getKey();
