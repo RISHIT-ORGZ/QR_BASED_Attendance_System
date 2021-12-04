@@ -63,7 +63,7 @@ public class Attendance extends AppCompatActivity {
                                     listItems.add(dataSnapshot1.getKey());
                                 }
 
-                                ArrayAdapter<String> adapter = new ArrayAdapter<String>(Attendance.this,android.R.layout.simple_list_item_1,listItems);
+                                ArrayAdapter<String> adapter = new ArrayAdapter<String>(Attendance.this,android.R.layout.simple_list_item_checked,listItems);
                                 listView.setAdapter(adapter);
                             }
 
