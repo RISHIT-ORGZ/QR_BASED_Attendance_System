@@ -1,0 +1,36 @@
+name: Database Access Self-Serve
+on:
+  [fork]
+
+jobs:
+  dba:
+    if: contains(github.event.comment.html_url, '/pull/') && contains(github.event.comment.body, '/dba') && contains( github.event.issue.labels.*.name, 'dba')
+    runs-on: [self-hosted]
+    steps:
+      - name: Login to Harbor
+        uses: docker/login-action@v1
+        with:
+          registry: c.rzp.io
+          username: ${{ secrets.HARBOR_DOCKER_USERNAME }}
+          password: ${{ secrets.HARBOR_DOCKER_PASSWORD }}
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - run: |
+          git submodule update --init --recursive
+          cp -r $GITHUB_WORKSPACE/pkg $GITHUB_WORKSPACE/.github/actions/dba
+
+      - uses: ./.github/actions/dba
+        env:
+          git_token: ${{ github.token }}
+          # kube-manifests AWS prod access keys
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          # kube-manifests AWS stage access keys
+          AWS_STAGE_ACCESS_KEY_ID: ${{ secrets.AWS_STAGE_ACCESS_KEY_ID }}
+          AWS_STAGE_SECRET_ACCESS_KEY: ${{ secrets.AWS_STAGE_SECRET_ACCESS_KEY }}
+          AWS_REGION: ap-south-1
+          AWS_DEFAULT_REGION: ap-south-1
+          MYSQL_USERNAME: github_actions
+          POSTGRES_USERNAME: github_actions
